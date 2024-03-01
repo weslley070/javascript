@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplos de 3!</title>
+    <style>
+        body{
+            background-color: rgb(68, 36, 209);
+            color: white;
+        }section{
+            background-color: #bf449c;
+            border-radius: 10px;
+            width: 400px;
+            margin: auto;
+            height: 50px;
+            padding-left: 7px;
+            
+        }footer{
+            font-style: italic;
+            text-align: center;
+        }h1{
+            text-align: center;
+        }p#res{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Multiplos de 3</h1>
+    <section>
+        digite um numero para verificar se ele é multiplo de 3:
+        <input itemid="num" type="number" id="n1">
+        <input type="button" value="verificar" onclick="verificar()">
+    </section>
+    <p id="res"></p>
+    <footer>&copy;Weslley Augusto</footer>
+    <script>
+        function verificar(){
+            var n1 = Number(document.getElementById('n1').value)
+            var res = document.getElementById('res')
+            n3 = n1 % 3
+            if(n3 == 0){
+                res.innerHTML = 'O numero digitado é multiplo de 3!&#x1f913'
+            }else{
+                res.innerHTML = 'O numero não é multiplo de 3!'
+            }
+            
+        }
+    </script>
+</body>
+</html>

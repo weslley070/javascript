@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aeroporto</title>  
+    <style>
+        div{
+            padding: 10px;
+        }
+    </style> 
+</head>
+<body>
+    <h1>Aeroporto!</h1>
+    Digite sua nacionalidade: <input type="text" id="pais">
+    <input type="button" value="verificar" onclick="verificar()">
+    <div id="res"></div>
+    <script>
+        function verificar(){
+            var pais = document.getElementById("pais").value// o comando .value é nescessario para converter um objeto dom para um valor
+            var res = document.getElementById("res")
+            if(pais == 'brasil'){
+                res.innerHTML = `Você é brasileiro!`
+            }else{
+                res.innerHTML += `<p>Você é estrangeiro!</p>`
+            }res.innerHTML += `<p>Seja bem vindo ao brasil!</p>`
+        }
+    </script>
+</body>
+</html>

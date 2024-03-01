@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de voto</title>
+    <style>
+        body{
+            background-color: rgb(74, 43, 229);
+            color:rgb(255, 255, 255);
+            font: normal 15pt arial;
+            text-align: center;
+        }section{
+            background-color: white;
+            color: black;
+            width: 400px;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 5px 5px 10px;
+        }footer{
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Verificador de voto!</h1>
+        <p>Esse site verifica se seu voto é obtigatório ou não, e se você tem idade para votar!</p>
+    </header>
+    <section>
+        Sua idade é: <input type="number" name="nt1" id="nt1">
+        <input type="button" value="verificar" onclick="votar()">
+        <p id="vota" ></p>
+    </section>
+    <footer>
+        &copy;Weslley Augusto
+    </footer>
+    <script>
+        function votar(){
+            var idade = Number(document.getElementById('nt1').value)
+            var vota = document.getElementById('vota')
+            if(idade < 16){
+                vota.innerHTML = `Não vota`
+            }else if(idade < 18 || idade >= 65){
+                vota.innerHTML = 'Voto opcional'
+            }else{
+                vota.innerHTML = 'Voto obrigatorio '
+            }
+        }
+    </script>
+</body>
+</html>

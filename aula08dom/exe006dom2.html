@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom PT2</title>
+    <style>
+        div#area{
+            font: normal 15pt arial;
+            background-color: rgb(0, 0, 0);
+            color: white;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div id="area"> <!-- div id = "area" onclick chama função ao clicar no elemento = 'nome da função()'  -->
+        interaja...
+<!---->
+    </div >
+    <script>
+       // para manipular eventos dom com javascript basta usar o comando:id do elemento dom.addEventListener('input do mouse',nome da função)
+       var area = document.getElementById("area")
+        area.addEventListener('click',clicar)
+        area.addEventListener('mouseenter',Entrar)
+        area.addEventListener('mouseout',sair)
+        var area = document.getElementById("area")
+        function clicar(){
+            area.innerHTML = 'Clicou!'
+            area.style.backgroundColor = 'yellow'
+        }function Entrar(){
+            area.innerHTML ='entrou!'
+            area.style.backgroundColor = 'purple'
+        }function sair(){
+            area.innerHTML = 'saiu!'
+            area.style.backgroundColor = 'red'
+        }
+    </script>
+</body>
+</html>

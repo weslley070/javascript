@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprimentos</title>
+    <style>
+        body{
+            background-color: rgb(117, 62, 255);
+            color: white;
+        }header{
+            text-align: center;
+        }footer{
+            text-align: center;
+            font-style: italic;
+        }section{
+            margin: auto;
+            background-color: rgb(255, 255, 255);
+            color: black;
+            width: 400px;
+            border-radius: 10px;
+            padding-left: 10px;
+            box-shadow: 5px 5px 10px;
+        }
+    </style>
+</head>
+<body onload="carregar()">
+    <header>
+        <h1 id="comprimenta">Comprimentos!</h1>
+    </header>
+    <section>
+        <p>Olá, seja bem-vindo(a) ao site que te comprimenta!</p>
+    </section>
+    <section id="1">
+        <h2>Um site que te comprimenta e muda a cor dinamicamente de acordo com a hora do dia!</h2>
+    </section>
+    <footer>
+        &copy;Weslley Augusto
+    </footer>
+    <script>
+        var hora = new Date()
+        var horas = hora.getHours()
+        function carregar(){
+            var h1 = document.getElementById('comprimenta')
+            var corpo = document.getElementsByTagName('body')[0]
+            var section1 = document.getElementById('1')
+            section1.style.backgroundColor= 'rgb(0, 221, 255)'
+            if(horas < 12 && horas >0){
+                h1.innerHTML = 'Bom dia!'
+                corpo.style.backgroundColor ='rgb(172, 206, 235)'
+            }else if(horas >12 && horas < 18){
+                h1.innerHTML = 'Boa tarde!'
+                corpo.style.backgroundColor = 'rgb(223, 134, 57)'
+            }else{
+                h1.innerHTML = 'Boa noite!'
+                corpo.style.backgroundColor = 'rgb(43, 43, 43)'
+            }
+
+        }
+    </script>
+</body>
+</html>

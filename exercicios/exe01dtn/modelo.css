@@ -1,0 +1,20 @@
+header{text-align: center;
+
+}footer{text-align: center;
+    font-style: italic;
+
+}section{background-color: white;
+    color: black;
+    border-radius: 10px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 5px 5px 10px;  
+    
+
+}body{
+    background-color: rgb(111, 0, 255);
+    color: white;
+    font: normal 15pt arial;
+}img{
+    padding: 10px;
+}

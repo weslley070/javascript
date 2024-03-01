@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-bt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impar ou par?</title>
+    <style>
+        body{
+            background-color: rgb(39, 82, 181);
+            color: white;
+            font: normal 15pt arial;
+            background-image:url(https://cdn1.vectorstock.com/i/1000x1000/08/45/dia-vector-4580845.jpg);
+        }
+        section{
+            background-color: rgb(255, 255, 255);
+            color: black;
+            margin: auto;
+            width: 500px;
+            border-radius: 10px;
+            padding-left: 10px;
+            padding-bottom: 10px;
+            
+        }footer{
+            text-align: center;
+            font-style: italic;
+        }input#n1{
+            height: 20px;
+            padding-bottom: 10px;
+            border-radius: 10px;
+            padding-left: 10px;
+        }header{
+            text-align: center;
+        }p#pag{
+            text-align: end;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Verificando se um numero é par ou impar!</h1>
+    </header>
+    <section>
+        <p id="b">digite abaixo o numero a se verifcar:</p>
+        <input type="number" id="n1">
+        <input type="button" value="verifcar" onclick="verificar()">
+        <p id="res"></p>
+    </section>
+    <p id="pag">Veja outros projetos clicando <a href="multi3.html" target="_blank" rel="next">aqui</a></p>
+    <footer>&copy;Weslley Augusto</footer>
+    <script>
+        function verificar(){
+            var n1 = Number(document.getElementById('n1').value)
+            var res = document.getElementById('res')
+            if(n1 % 2 === 0 ){
+                res.innerHTML = `O numero ${n1} é par!`
+            }else{
+                res.innerHTML = `O numero ${n1} é impar!` 
+            }
+        }
+    </script>
+</body>
+</html>

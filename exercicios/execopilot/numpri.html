@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numeros primos!</title>
+    <style>
+        section{
+            background-color: white;
+            margin: auto;
+            width: 500px;
+            padding-left: 10px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 10px;
+
+        }body{
+            background-color:rgb(28, 212, 98);
+        }header{
+            text-align: center;
+        }input#nt1{
+            border-radius: 5px;
+        }mark{
+            border-radius: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-bottom: 3px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Número primo ou não?</h1>
+        <p id="p"><mark>Digite abaixo o numero para ver se ele é Primo:</mark></p>
+    </header>
+    <section>
+        <input type="number" id="nt1">
+        <input type="button" value="verificar" onclick="verificar()">
+        <div id="res"></div>
+    </section>
+<script>
+    function verificar(){
+        var n1 = Number(document.getElementById('nt1').value)
+        var res = document.getElementById('res')
+        if(n1 / n1 && n1 /1 ){
+            res.innerHTML = 'O numero ' + n1 + ' é primo!'
+        }else{
+            res.innerHTML = 'O numero ' + n1 + ' não é primo!'
+        }
+    }
+</script>
+</body>
+</html>

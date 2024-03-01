@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando valores</title>
+    <!--se voce quiser pode modificar um elemento especifico como o primeiro input de numero usando a formula: tag do elemento#id dele como feito com a div-->
+    <style>
+        body{
+            color: white;
+        }div#res{
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body id="corpo">
+    <h1>Somando valores!&#x1f913;</h1>
+    <p>Digite os números para serem somados no campo abaixo:</p>
+    <input type="number" name="nt1" id="nt1"> +
+    <input type="number" name="nt2" id="nt2">
+    <input type="button" value="Somar" id="Somar" onclick="Somar()">
+    <div id="res">O valor da soma aparecerá neste campo.</div>
+    <script>
+        var corpo = document.getElementById("corpo")
+        corpo.style.backgroundColor = 'black'
+        function Somar(){
+            var tn1 = document.getElementById("nt1")
+            var tn2 = document.getElementById("nt2")
+            var res = document.getElementById("res")
+            var n1 = Number(tn1.value)//o vs code não "reconhecer" o comado value é normal.
+            var n2 = Number(tn2.value)
+            var soma = n1 + n2
+            res.innerHTML = `A soma entre ${n1} + ${n2} é igual à ${soma}!`
+        }
+    </script>
+</body>
+</html>

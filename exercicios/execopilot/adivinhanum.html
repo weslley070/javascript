@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adivinhar</title>
+    <style>
+        section{
+            background-color: white;
+            color: black;
+            border-radius: 10px;
+            padding-left: 5px;
+            font: normal 15pt arial;
+            text-align: center'
+        }input#nt1{
+            height: 30px;
+        }header{
+            text-align: center;
+            font-size: x-large;
+        }footer{
+            text-align: center;
+            font-style: italic;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Adivinhando números!</h1>
+    </header>
+    <section>
+        <p>Digite um numero no campo abaixo para verifica-lo: </p>
+        <input id="nt1" type="number">
+        <input type="button" value="verificar" onclick="verificar()">
+        <div id="res">Aqui aparecera o resulatdo da adivinhação!</div>
+        <p id="v"></p>
+    </section>
+    <footer>
+        &copy;Weslley Augusto
+    </footer>
+<script>
+    var corpo = document.getElementsByTagName("body")[0]
+    corpo.style.backgroundColor = 'rgb(111, 0, 255)'
+    corpo.style.color = 'white'
+    var na = Math.floor(Math.random() * 100)
+    var tenta = 3
+    function verificar(){
+        --tenta
+        var res = document.getElementById('res')
+        var n1 = Number(document.getElementById('nt1').value)
+        if(n1 == na){
+            res.innerHTML = `Parabéns! ${n1} é o número!`
+        }else if(n1 > na){
+            res.innerHTML = `Errou! ${n1} não é o número! O número é menor!`
+        }
+         else{
+            res.innerHTML = `Errou! ${n1} não é o número! O número é maior!`
+        }
+        var v = document.getElementById('v')
+    }
+</script>
+</body>
+</html>

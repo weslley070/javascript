@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução ao DOM</title>
+    <style>
+        body{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Introdução ao DOM</h1>
+    <p id="1">Aqui vai o resultado</p>
+    <p id = "p2">Aprendendo a usar o <strong>DOM</strong> em javascript.</p>
+    <div id="url">Clique em mim!</div>
+    <div id="teste">Teste querry selector</div>
+    <script>
+        var p1 = window.document.getElementById('1')
+        document.write(p1.innerHTML)
+        window.document.writeln(document.URL)
+        window.document.writeln(window.document.characterSet)
+        window.document.writeln(window.navigator.appName)
+        p1.style.backgroundColor ='blue'
+        var corpo = document.getElementsByTagName("body")[0]
+        corpo.style.backgroundColor = 'black'
+        var p2 = window.document.getElementById("p2")
+        p2.style.backgroundColor = 'green'
+        var teste = document.querySelector("div#teste")
+        teste.style.backgroundColor = 'purple'
+        var url = document.querySelector("div#url")
+        url.style.backgroundColor = 'pink'
+        /*os unicos que valem a pena usar é byid bytagname e querryselector
+        para o querryselector usar . quando é class e # quando é id
+        */
+        
+    </script>
+</body>
+</html>
